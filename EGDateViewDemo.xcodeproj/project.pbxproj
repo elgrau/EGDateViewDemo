@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD1C2E8715C2893D00940E22 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1C2E8615C2893D00940E22 /* UIKit.framework */; };
+		DD1C2E8915C2893D00940E22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1C2E8815C2893D00940E22 /* Foundation.framework */; };
+		DD1C2E8B15C2893D00940E22 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1C2E8A15C2893D00940E22 /* CoreGraphics.framework */; };
+		DD1C2E9115C2893D00940E22 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD1C2E8F15C2893D00940E22 /* InfoPlist.strings */; };
+		DD1C2E9315C2893D00940E22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1C2E9215C2893D00940E22 /* main.m */; };
+		DD1C2E9715C2893D00940E22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1C2E9615C2893D00940E22 /* AppDelegate.m */; };
+		DD1C2E9A15C2893D00940E22 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1C2E9815C2893D00940E22 /* MainStoryboard.storyboard */; };
+		DD1C2E9D15C2893D00940E22 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1C2E9C15C2893D00940E22 /* ViewController.m */; };
+		DD1C2EA615C2897000940E22 /* EGDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1C2EA515C2897000940E22 /* EGDateView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DD1C2E8215C2893D00940E22 /* EGDateViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EGDateViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD1C2E8615C2893D00940E22 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DD1C2E8815C2893D00940E22 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD1C2E8A15C2893D00940E22 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DD1C2E8E15C2893D00940E22 /* EGDateViewDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EGDateViewDemo-Info.plist"; sourceTree = "<group>"; };
+		DD1C2E9015C2893D00940E22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD1C2E9215C2893D00940E22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD1C2E9415C2893D00940E22 /* EGDateViewDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EGDateViewDemo-Prefix.pch"; sourceTree = "<group>"; };
+		DD1C2E9515C2893D00940E22 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DD1C2E9615C2893D00940E22 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DD1C2E9915C2893D00940E22 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		DD1C2E9B15C2893D00940E22 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DD1C2E9C15C2893D00940E22 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DD1C2EA415C2897000940E22 /* EGDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGDateView.h; sourceTree = "<group>"; };
+		DD1C2EA515C2897000940E22 /* EGDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGDateView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD1C2E7F15C2893D00940E22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD1C2E8715C2893D00940E22 /* UIKit.framework in Frameworks */,
+				DD1C2E8915C2893D00940E22 /* Foundation.framework in Frameworks */,
+				DD1C2E8B15C2893D00940E22 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD1C2E7715C2893D00940E22 = {
+			isa = PBXGroup;
+			children = (
+				DD1C2EA315C2896000940E22 /* EGDateView */,
+				DD1C2E8C15C2893D00940E22 /* EGDateViewDemo */,
+				DD1C2E8515C2893D00940E22 /* Frameworks */,
+				DD1C2E8315C2893D00940E22 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD1C2E8315C2893D00940E22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD1C2E8215C2893D00940E22 /* EGDateViewDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD1C2E8515C2893D00940E22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD1C2E8615C2893D00940E22 /* UIKit.framework */,
+				DD1C2E8815C2893D00940E22 /* Foundation.framework */,
+				DD1C2E8A15C2893D00940E22 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD1C2E8C15C2893D00940E22 /* EGDateViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DD1C2E9515C2893D00940E22 /* AppDelegate.h */,
+				DD1C2E9615C2893D00940E22 /* AppDelegate.m */,
+				DD1C2E9815C2893D00940E22 /* MainStoryboard.storyboard */,
+				DD1C2E9B15C2893D00940E22 /* ViewController.h */,
+				DD1C2E9C15C2893D00940E22 /* ViewController.m */,
+				DD1C2E8D15C2893D00940E22 /* Supporting Files */,
+			);
+			path = EGDateViewDemo;
+			sourceTree = "<group>";
+		};
+		DD1C2E8D15C2893D00940E22 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD1C2E8E15C2893D00940E22 /* EGDateViewDemo-Info.plist */,
+				DD1C2E8F15C2893D00940E22 /* InfoPlist.strings */,
+				DD1C2E9215C2893D00940E22 /* main.m */,
+				DD1C2E9415C2893D00940E22 /* EGDateViewDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD1C2EA315C2896000940E22 /* EGDateView */ = {
+			isa = PBXGroup;
+			children = (
+				DD1C2EA415C2897000940E22 /* EGDateView.h */,
+				DD1C2EA515C2897000940E22 /* EGDateView.m */,
+			);
+			name = EGDateView;
+			path = EGDateViewDemo/EGDateView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD1C2E8115C2893D00940E22 /* EGDateViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD1C2EA015C2893D00940E22 /* Build configuration list for PBXNativeTarget "EGDateViewDemo" */;
+			buildPhases = (
+				DD1C2E7E15C2893D00940E22 /* Sources */,
+				DD1C2E7F15C2893D00940E22 /* Frameworks */,
+				DD1C2E8015C2893D00940E22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EGDateViewDemo;
+			productName = EGDateViewDemo;
+			productReference = DD1C2E8215C2893D00940E22 /* EGDateViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD1C2E7915C2893D00940E22 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = DD1C2E7C15C2893D00940E22 /* Build configuration list for PBXProject "EGDateViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DD1C2E7715C2893D00940E22;
+			productRefGroup = DD1C2E8315C2893D00940E22 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD1C2E8115C2893D00940E22 /* EGDateViewDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD1C2E8015C2893D00940E22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD1C2E9115C2893D00940E22 /* InfoPlist.strings in Resources */,
+				DD1C2E9A15C2893D00940E22 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD1C2E7E15C2893D00940E22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD1C2E9315C2893D00940E22 /* main.m in Sources */,
+				DD1C2E9715C2893D00940E22 /* AppDelegate.m in Sources */,
+				DD1C2E9D15C2893D00940E22 /* ViewController.m in Sources */,
+				DD1C2EA615C2897000940E22 /* EGDateView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DD1C2E8F15C2893D00940E22 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD1C2E9015C2893D00940E22 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DD1C2E9815C2893D00940E22 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD1C2E9915C2893D00940E22 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD1C2E9E15C2893D00940E22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DD1C2E9F15C2893D00940E22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD1C2EA115C2893D00940E22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EGDateViewDemo/EGDateViewDemo-Prefix.pch";
+				INFOPLIST_FILE = "EGDateViewDemo/EGDateViewDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DD1C2EA215C2893D00940E22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EGDateViewDemo/EGDateViewDemo-Prefix.pch";
+				INFOPLIST_FILE = "EGDateViewDemo/EGDateViewDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD1C2E7C15C2893D00940E22 /* Build configuration list for PBXProject "EGDateViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD1C2E9E15C2893D00940E22 /* Debug */,
+				DD1C2E9F15C2893D00940E22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD1C2EA015C2893D00940E22 /* Build configuration list for PBXNativeTarget "EGDateViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD1C2EA115C2893D00940E22 /* Debug */,
+				DD1C2EA215C2893D00940E22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD1C2E7915C2893D00940E22 /* Project object */;
+}
