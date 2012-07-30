@@ -61,7 +61,6 @@
     
 }
 
-
 -(void)setDate:(NSDate *)date
 {
     if (date != _date) {
@@ -72,6 +71,15 @@
         [self setNeedsDisplay];
     }
 }
+
+-(void)displayDifferenceBetweenDate:(NSDate *)fromDate andDate:(NSDate *)toDate
+{
+    _dateComponents = [[NSCalendar currentCalendar] components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:fromDate toDate:toDate options:0];
+    
+    [self setNeedsDisplay];
+}
+
+
 
 -(void)setDisplayMode:(EGDateViewDisplayMode)displayMode
 {

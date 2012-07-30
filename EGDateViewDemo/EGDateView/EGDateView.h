@@ -16,11 +16,6 @@ typedef enum EGDateViewDisplayMode {
 
 @class EGDateView;
 
-@protocol EGDateViewDataSource <NSObject>
--(NSDateComponents *)dateComponentsForEsperanzaVidaView:(EGDateView *)view;
-@end
-
-
 @interface EGDateView : UIView
 
 @property (strong, nonatomic) NSDate *date;
@@ -33,6 +28,8 @@ typedef enum EGDateViewDisplayMode {
 @property (strong, nonatomic) UIColor *colorDateForComponentType;
 @property (strong, nonatomic) UIColor *colorTimeForComponentType;
 @property (nonatomic) EGDateViewDisplayMode displayMode;
+
+-(void)displayDifferenceBetweenDate:(NSDate *)fromDate andDate:(NSDate *)toDate;
 
 @end
 
