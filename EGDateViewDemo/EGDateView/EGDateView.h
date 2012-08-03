@@ -30,6 +30,8 @@ typedef enum EGDateViewDisplayMode {
 @property (nonatomic) EGDateViewDisplayMode displayMode;
 
 -(void)displayDifferenceBetweenDate:(NSDate *)fromDate andDate:(NSDate *)toDate;
+-(void)displayDateComponents:(NSDateComponents *)dateComponents;
+-(void)displayNegativeDateComponents:(NSDateComponents *)dateComponents;
 
 @end
 

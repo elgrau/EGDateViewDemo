@@ -16,6 +16,7 @@
 -(void)setupView;
 
 @property (nonatomic,strong) NSDateComponents *dateComponents;
+@property (nonatomic) BOOL drawNegativeSign;
 
 @end
 
@@ -32,6 +33,7 @@
 @synthesize fontDateComponent = _fontDateComponent;
 @synthesize fontTime = _fontTime;
 @synthesize fontTimeComponent = _fontTimeComponent;
+@synthesize drawNegativeSign = _drawNegativeSign;
 
 
 - (id)initWithFrame:(CGRect)frame
@@ -57,6 +59,7 @@
 -(void)setupView
 {
     self.backgroundColor = [UIColor clearColor];
+    _drawNegativeSign = NO;
     
     _displayMode = EGDateDisplayModeDateTime;
     _fontDate = [UIFont systemFontOfSize:15.0f];
@@ -89,6 +92,19 @@
     [self setNeedsDisplay];
 }
 
+-(void)displayDateComponents:(NSDateComponents *)dateComponents
+{
+    _dateComponents = dateComponents;
+    
+    [self setNeedsDisplay];
+}
+
+-(void)displayNegativeDateComponents:(NSDateComponents *)dateComponents
+{
+    _drawNegativeSign = YES;
+    
+    [self displayDateComponents:dateComponents];
+}
 
 
 -(void)setDisplayMode:(EGDateViewDisplayMode)displayMode
@@ -162,11 +178,35 @@
     return [NSString stringWithFormat:@"%02d",_dateComponents.minute];
 }
 
+-(UIFont *)fontForNegativeSign
+{
+    UIFont *font = _fontDate;
+    
+    if (_displayMode == EGDateDisplayModeTime) {
+        font = _fontTime;            
+    }
+    return font;
+}
+
+-(UIColor *)colorForNegativeSign
+{
+    UIColor *color = _colorDate;
+    
+    if (_displayMode == EGDateDisplayModeTime) {
+        color = _colorTime;            
+    }
+    return color;
+}
 
 
 -(CGFloat)widthForDate
 {
     CGFloat width = 0.0;    
+    
+    if (_drawNegativeSign) {                
+        CGSize negativeSignSize = [@"-" sizeWithFont:[self fontForNegativeSign]];
+        width += negativeSignSize.width + COMPONENT_SEPARATOR;
+    }
     
     if (_displayMode != EGDateDisplayModeTime) {
         CGSize yearSize = [[self year] sizeWithFont:_fontDate];
@@ -176,8 +216,8 @@
         CGSize yearComponentSize = [@"A" sizeWithFont:_fontDateComponent];
         CGSize monthComponentSize = [@"M" sizeWithFont:_fontDateComponent];
         CGSize dayComponentSize = [@"D" sizeWithFont:_fontDateComponent];
-
-        width = yearSize.width + COMPONENT_SEPARATOR + yearComponentSize.width + SEPARATOR 
+        
+        width += yearSize.width + COMPONENT_SEPARATOR + yearComponentSize.width + SEPARATOR 
         + monthSize.width + COMPONENT_SEPARATOR + monthComponentSize.width + SEPARATOR
         + daySize.width + COMPONENT_SEPARATOR + dayComponentSize.width;
     }
@@ -192,7 +232,7 @@
         
         CGSize hourComponentSize = [@"H" sizeWithFont:_fontTimeComponent];
         CGSize minuteComponentSize = [@"M" sizeWithFont:_fontTimeComponent];
-
+        
         
         width += hourSize.width + COMPONENT_SEPARATOR + hourComponentSize.width + SEPARATOR
         + minuteSize.width + COMPONENT_SEPARATOR + minuteComponentSize.width;
@@ -211,6 +251,17 @@
         CGFloat linePosition = (self.frame.size.width - [self widthForDate]) / 2;
         CGFloat topPosition = 0.0;
         CGFloat heightDateText = 0.0;
+        
+        if (_drawNegativeSign) {                            
+            [[self colorForNegativeSign] setFill];
+            UIFont *font = [self fontForNegativeSign];
+            
+            CGContextTranslateCTM(ctx, linePosition, topPosition);
+            CGSize size = [@"-" sizeWithFont:[self fontForNegativeSign]];
+            CGRect textRect = CGRectMake(0.0, 0.0, size.width, size.height);
+            [@"-" drawInRect:textRect withFont:font];
+            linePosition = size.width + COMPONENT_SEPARATOR;
+        }
         
         if (_displayMode != EGDateDisplayModeTime) {        
             NSArray *dateValues = [NSArray arrayWithObjects:[self year],[self month], [self day], nil];
@@ -241,9 +292,10 @@
         }
         
         if (_displayMode != EGDateDisplayModeDate) {
-            CGContextTranslateCTM(ctx, linePosition, topPosition);
             
             if (_displayMode == EGDateDisplayModeDateTime) {            
+                CGContextTranslateCTM(ctx, linePosition, topPosition);
+                
                 // Calculamos la posición Y donde se va a empezar a ubicar el tiempo
                 CGSize sizeDate = [@"0" sizeWithFont:_fontDate];
                 CGSize sizeTime = [@"0" sizeWithFont:_fontTime];        
@@ -277,6 +329,7 @@
         
         CGContextRestoreGState(ctx);
     }
+    _drawNegativeSign = NO;
 }
 
 @end
